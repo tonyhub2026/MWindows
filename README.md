@@ -1,4 +1,4 @@
-# 【產品名稱】MapleWindows
+# 【產品名稱】MWindows
 
 > 下載:請到右側 **Releases**,下載最新版的 `.zip`。需要啟用碼才能使用。
 
