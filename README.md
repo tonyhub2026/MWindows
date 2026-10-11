@@ -42,5 +42,3 @@
 ## 聯絡方式
 
 活動期間加入LINE官方好友領取免費試用三天啟用碼https://lin.ee/NeJcPBY
-
-tony2283311@gmail.com
