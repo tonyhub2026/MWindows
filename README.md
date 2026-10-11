@@ -41,4 +41,4 @@
 
 ## 聯絡方式
 
-活動期間加入LINE官方好友https://lin.ee/NeJcPBY領取免費試用三天啟用碼
+活動期間加入LINE官方好友https://lin.ee/NeJcPBY 領取免費試用三天啟用碼
