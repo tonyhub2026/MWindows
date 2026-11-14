@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/ca974e1d-0a19-4e7e-bbec-1fde0af5d193
 
 
 > 下載:請到右側 **Releases**,下載最新版的 `.zip`。需要啟用碼才能使用。
-<img width="402" height="821" alt="客戶端預覽" src="https://github.com/user-attachments/assets/512e65ac-4bdd-4b0e-bd04-e7cb664f3d04" />
+<img width="323" height="574" alt="客戶端預覽" src="https://github.com/user-attachments/assets/512e65ac-4bdd-4b0e-bd04-e7cb664f3d04" />
 ## 開啟
 
 1. 把下載的 `.zip` **按右鍵 →「全部解壓縮」**,再執行解壓出來的資料夾裡的 **`MWindows.exe`**。
