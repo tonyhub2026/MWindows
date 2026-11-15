@@ -40,8 +40,8 @@ nav .links a:hover{color:var(--text)}
 .btn.ghost{border:1px solid var(--line);color:var(--text);background:var(--card)}
 .btn.line{background:#06c755;color:#fff}
 /* hero */
-.hero{padding:44px 0 36px;background:radial-gradient(900px 500px at 80% -10%,rgba(79,140,255,.25),transparent),radial-gradient(700px 400px at 0% 20%,rgba(61,220,151,.15),transparent)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero{overflow:hidden;padding:44px 0 36px;background:radial-gradient(900px 500px at 80% -10%,rgba(79,140,255,.25),transparent),radial-gradient(700px 400px at 0% 20%,rgba(61,220,151,.15),transparent)}
+.hero .wrap{display:grid;grid-template-columns:1fr 300px 1.05fr;gap:40px;align-items:center}
 .badge{display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(61,220,151,.12);color:var(--accent);font-size:14px;font-weight:700;border:1px solid rgba(61,220,151,.35)}
 h1{font-size:44px;line-height:1.25;margin:16px 0 14px;letter-spacing:.5px}
 h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -49,9 +49,13 @@ h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--acc
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .hero .note{margin-top:14px;color:var(--muted);font-size:14px}
 .shot{justify-self:center;position:relative}
-.shot img{width:100%;max-width:330px;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--line);display:block}
+.shot img{width:100%;max-width:300px;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--line);display:block}
 .shot::before{content:"";position:absolute;inset:-20px;background:radial-gradient(closest-side,rgba(79,140,255,.35),transparent);z-index:-1}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}h1{font-size:34px}.shot img{max-width:300px}}
+.demo{text-align:center}
+.demo h2{font-size:22px;margin:0 0 4px}
+.demo .sub{margin:0 0 14px;font-size:15px}
+@media (max-width:1100px){.hero .wrap{grid-template-columns:1fr 1fr}.hero .wrap>div:first-child{grid-column:1/-1}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}h1{font-size:34px}.shot img{max-width:280px}}
 /* sections */
 section{padding:44px 0;border-top:1px solid var(--line)}
 section.alt{background:var(--bg2)}
@@ -101,8 +105,14 @@ details p{color:var(--muted);margin:10px 0 0}
 .price .amount small{font-size:16px;color:var(--muted);font-weight:400}
 .price ul{list-style:none;padding:0;margin:14px 0 20px;color:var(--muted)}
 .price li{padding:4px 0}
+.price{position:relative}
+.pick{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#06281a;font-weight:800;font-size:13px;padding:3px 14px;border-radius:999px}
 .price.hot{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+.fine{color:var(--muted);font-size:14px;margin:18px 0 0}
+.legal{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;color:var(--muted);font-size:14.5px}
+.legal ol{margin:0;padding-left:22px}
+.legal li{margin:6px 0}
 .warnbox{background:rgba(255,204,102,.08);border:1px solid rgba(255,204,102,.35);border-radius:12px;padding:14px 18px;color:#f3dfae;margin-top:18px}
 </style>
 </head>
@@ -119,6 +129,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <a href="#patrol">巡邏設定</a>
       <a href="#pricing">方案</a>
       <a href="#faq">常見問題</a>
+      <a href="#disclaimer">免責聲明</a>
     </div>
   </div>
 </nav>
@@ -136,18 +147,15 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <p class="note">活動期間加入 LINE 官方好友即可領取免費試用序號。</p>
     </div>
     <div class="shot"><img src="assets/screenshot.png" alt="MWindows 程式畫面"></div>
-  </div>
-</header>
-
-<section id="demo" class="alt" style="text-align:center">
-  <div class="wrap">
-    <h2>實際展示</h2>
-    <p class="sub">按下「開始」之後，全程自動追蹤。</p>
-    <div class="video">
-      <video src="assets/demo.mp4" poster="assets/demo_poster.jpg" controls autoplay muted loop playsinline preload="metadata"></video>
+    <div class="demo" id="demo">
+      <h2>實際展示</h2>
+      <p class="sub">按下「開始」之後，全程自動追蹤。</p>
+      <div class="video">
+        <video src="assets/demo.mp4" poster="assets/demo_poster.jpg" controls autoplay muted loop playsinline preload="metadata"></video>
+      </div>
     </div>
   </div>
-</section>
+</header>
 
 <section id="features">
   <div class="wrap">
@@ -254,12 +262,12 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section id="pricing">
   <div class="wrap">
     <h2>方案與價格</h2>
-    <p class="sub">價格即將公布，現在加入 LINE 官方好友可先領免費序號試用。</p>
-    <div class="grid g3">
-      <div class="card price"><h3>週卡</h3><div class="amount">洽詢</div><ul><li>短期體驗</li><li>完整功能</li></ul><a class="btn ghost" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 洽詢</a></div>
-      <div class="card price hot"><h3>月卡</h3><div class="amount">洽詢</div><ul><li>最受歡迎</li><li>完整功能</li><li>辨識資料持續更新</li></ul><a class="btn primary" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 洽詢</a></div>
-      <div class="card price"><h3>季卡</h3><div class="amount">洽詢</div><ul><li>長期使用更划算</li><li>完整功能</li></ul><a class="btn ghost" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 洽詢</a></div>
+    <p class="sub">兩種方案都是完整功能，透過 LINE 官方帳號購買。新朋友可先加 LINE 領免費序號試用。</p>
+    <div class="grid g2" style="max-width:760px">
+      <div class="card price"><h3>週卡</h3><div class="amount">NT$ 250 <small>/ 7 天</small></div><ul><li>完整功能：追蹤 + 自動巡邏</li><li>辨識資料持續更新</li><li>適合短期體驗</li></ul><a class="btn ghost" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 購買</a></div>
+      <div class="card price hot"><span class="pick">最划算</span><h3>月卡</h3><div class="amount">NT$ 700 <small>/ 30 天</small></div><ul><li>完整功能：追蹤 + 自動巡邏</li><li>辨識資料持續更新</li><li>平均每天不到 24 元</li></ul><a class="btn primary" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 購買</a></div>
     </div>
+    <p class="fine">※ 本商品為數位商品（啟用碼），<b class="ui">一經售出恕不退款、不退換</b>。購買即表示您已閱讀並同意下方<a href="#disclaimer">免責聲明</a>。建議先用免費序號試用，確認能正常使用再購買。</p>
   </div>
 </section>
 
@@ -280,7 +288,23 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   </div>
 </section>
 
-<section style="text-align:center">
+<section id="disclaimer">
+  <div class="wrap">
+    <h2>免責聲明與購買須知</h2>
+    <p class="sub">購買或使用本程式前請詳細閱讀，購買即視為同意以下條款。</p>
+    <div class="legal"><ol>
+      <li>MWindows 為獨立開發的第三方輔助程式，與任何遊戲公司、遊戲營運商<b class="ui">無任何關係</b>，亦未經其授權或認可。</li>
+      <li>使用第三方輔助程式可能違反遊戲的使用者條款。因使用本程式而導致的帳號警告、停權、封鎖、虛寶或遊戲資料損失等任何後果，<b class="ui">均由使用者自行承擔</b>，開發者不負任何責任。</li>
+      <li>本程式依「現況」提供，不保證在所有電腦環境、遊戲版本或任何情況下都能正常運作或達到特定效果；遊戲改版可能導致功能暫時無法使用。</li>
+      <li>本商品為數位商品（啟用碼），交付後即可使用，<b class="ui">一經售出恕不退款、不退換</b>，亦不因個人因素（如不會使用、電腦不相容、遊戲停權、未使用完畢等）退費。購買前請先使用免費序號試用。</li>
+      <li>每組啟用碼限一台電腦使用，換電腦每月限 2 次；啟用碼請自行妥善保管，轉售、分享或外流導致失效者，恕不補發。</li>
+      <li>使用期間依購買的方案計算，到期後需續購才能繼續使用。</li>
+      <li>開發者保留隨時修改程式功能、價格與本條款的權利，修改後以本頁公告為準。</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="alt" style="text-align:center">
   <div class="wrap">
     <h2>現在就開始</h2>
     <p class="sub">加入 LINE 官方好友，領取免費序號、詢問方案或回報問題。</p>
