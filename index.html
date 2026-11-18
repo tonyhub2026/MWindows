@@ -137,14 +137,14 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <span class="badge">最新版 v3.8 · Windows</span>
+      <span class="badge">最新版 v3.14 · Windows</span>
       <h1>按一下「開始」<br><em>追蹤交給 MWindows</em></h1>
       <p class="lead">自動偵測畫面、自動接手追蹤，結束後滑鼠立刻還給你。<br>內建自動巡邏，一個視窗、一組啟用碼全部搞定。</p>
       <div class="cta">
         <a class="btn primary" id="dl" href="#install" data-href="DOWNLOAD_URL">⬇ 下載最新版</a>
-        <a class="btn line" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">加 LINE 好友 免費體驗 3 天</a>
+        <a class="btn line" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">加 LINE 好友購買</a>
       </div>
-      <p class="note">加入 LINE 官方好友，即可領取 3 天免費體驗序號，完整功能都能用。</p>
+      <p class="note">加入 LINE 官方好友即可購買啟用碼，完整功能都能用。</p>
     </div>
     <div class="shot"><img src="assets/screenshot.png" alt="MWindows 程式畫面"></div>
     <div class="demo" id="demo">
@@ -164,7 +164,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <div class="grid g3">
       <div class="card"><div class="ic">🎯</div><h3>一鍵自動追蹤</h3><p>按「開始」後自動偵測遊戲畫面，需要時自動接手滑鼠，穩定又精準。</p></div>
       <div class="card"><div class="ic">🛡️</div><h3>隨時拿回控制</h3><p>按「停止」或按住 <kbd>Esc</kbd> 約半秒，滑鼠馬上還給你，完全不卡手。</p></div>
-      <div class="card"><div class="ic">🔁</div><h3>內建自動巡邏</h3><p>自訂定點、順序、繩子與技能鍵；需要追蹤時自動暫停巡邏，結束後接著巡。</p></div>
+      <div class="card"><div class="ic">🔁</div><h3>內建自動巡邏</h3><p>自訂定點、順序、繩子與技能鍵，可逐點指定哪些點放技能、也能定時自動休息；需要追蹤時自動暫停巡邏，結束後接著巡。</p></div>
       <div class="card"><div class="ic">☁️</div><h3>辨識資料持續更新</h3><p>辨識資料會自動更新，越用越準，不必重新下載安裝。</p></div>
       <div class="card"><div class="ic">🗺️</div><h3>多張地圖、匯出匯入</h3><p>每張地圖一組路線，可匯出成檔案，搬到另一台電腦直接匯入使用。</p></div>
       <div class="card"><div class="ic">🚦</div><h3>狀態一眼看懂</h3><p>紅綠黃燈號顯示目前狀態，視窗位置自動記住，開了就能繼續。</p></div>
@@ -242,15 +242,16 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
         <div class="tip">設定按鍵時請切換成英文輸入法，中文輸入法會讓程式讀不到按鍵。</div></div></div>
       <div class="step"><div><h3>設延遲</h3>
         <ul>
-          <li><b class="ui">定點</b>：勾選後，角色每到一個定點會放幾次技能、每次間隔幾秒。不勾就只走點。</li>
+          <li><b class="ui">定點</b>：勾選後會在定點放技能，並設定放幾次、每次間隔幾秒；每個定點還能<b class="ui">單獨勾選</b>要不要放（只在你指定的點放）。不勾就全程只走點。</li>
           <li><b class="ui">移動中</b>：勾選後，移動途中每隔幾秒也放一次技能。</li>
+          <li><b class="ui">定時休息</b>：可設定每跑幾輪自動休息幾分鐘（休息時不放技能），長時間掛機更自然。</li>
         </ul></div></div>
       <div class="step"><div><h3>記錄定點</h3>
-        <p>按「<b class="ui">＋ 新增定點</b>」→ 讓角色站到要停的位置 → 按「<b class="ui">記錄定點</b>」。重複到路線上每個點都記好，多的欄位按右鍵刪除。</p></div></div>
+        <p>按「<b class="ui">＋ 新增定點</b>」→ 讓角色站到要停的位置 → 按該列的「<b class="ui">定點</b>」按鈕記錄。重複到路線上每個點都記好，多的欄位按右鍵刪除。</p></div></div>
       <div class="step"><div><h3>設順序</h3>
         <p>在「<b class="ui">順序</b>」填定點編號（例如 <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>），走完會回到第一個形成循環。</p></div></div>
       <div class="step"><div><h3>記錄繩子</h3>
-        <p>路線需要爬繩往上時，把整段會用到的每一條繩子都記起來：按「<b class="ui">＋ 新增繩子</b>」→ 讓角色站到<b class="ui">繩子正下方的地面</b> → 按「<b class="ui">記錄繩子</b>」。</p></div></div>
+        <p>路線需要爬繩往上時，把整段會用到的每一條繩子都記起來：按「<b class="ui">＋ 新增繩子</b>」→ 讓角色站到<b class="ui">繩子正下方的地面</b> → 按該列的「<b class="ui">繩子</b>」按鈕記錄。</p></div></div>
       <div class="step"><div><h3>存檔</h3>
         <p>按「<b class="ui">存檔</b>」（按鈕上有 <b class="ui">*</b> 代表還沒存），下次開啟自動載入。</p></div></div>
       <div class="step"><div><h3>開始巡邏</h3>
@@ -262,12 +263,12 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section id="pricing">
   <div class="wrap">
     <h2>方案與價格</h2>
-    <p class="sub">兩種方案都是完整功能，透過 LINE 官方帳號購買。新朋友加 LINE 好友即可免費體驗 3 天。</p>
+    <p class="sub">兩種方案都是完整功能，透過 LINE 官方帳號購買。</p>
     <div class="grid g2" style="max-width:760px">
       <div class="card price"><h3>週卡</h3><div class="amount">NT$ 250 <small>/ 7 天</small></div><ul><li>完整功能：追蹤 + 自動巡邏</li><li>辨識資料持續更新</li><li>適合短期體驗</li></ul><a class="btn ghost" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 購買</a></div>
       <div class="card price hot"><span class="pick">最划算</span><h3>月卡</h3><div class="amount">NT$ 700 <small>/ 30 天</small></div><ul><li>完整功能：追蹤 + 自動巡邏</li><li>辨識資料持續更新</li><li>平均每天不到 24 元</li></ul><a class="btn primary" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">LINE 購買</a></div>
     </div>
-    <p class="fine">※ 本商品為數位商品（啟用碼），<b class="ui">一經售出恕不退款、不退換</b>。購買即表示您已閱讀並同意下方<a href="#disclaimer">免責聲明</a>。建議先加 LINE 好友免費體驗 3 天，確認能正常使用再購買。</p>
+    <p class="fine">※ 本商品為數位商品（啟用碼），<b class="ui">一經售出恕不退款、不退換</b>。購買即表示您已閱讀並同意下方<a href="#disclaimer">免責聲明</a>。</p>
   </div>
 </section>
 
@@ -296,7 +297,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <li>MWindows 為獨立開發的第三方輔助程式，與任何遊戲公司、遊戲營運商<b class="ui">無任何關係</b>，亦未經其授權或認可。</li>
       <li>使用第三方輔助程式可能違反遊戲的使用者條款。因使用本程式而導致的帳號警告、停權、封鎖、虛寶或遊戲資料損失等任何後果，<b class="ui">均由使用者自行承擔</b>，開發者不負任何責任。</li>
       <li>本程式依「現況」提供，不保證在所有電腦環境、遊戲版本或任何情況下都能正常運作或達到特定效果；遊戲改版可能導致功能暫時無法使用。</li>
-      <li>本商品為數位商品（啟用碼），交付後即可使用，<b class="ui">一經售出恕不退款、不退換</b>，亦不因個人因素（如不會使用、電腦不相容、遊戲停權、未使用完畢等）退費。購買前請先使用 3 天免費體驗。</li>
+      <li>本商品為數位商品（啟用碼），交付後即可使用，<b class="ui">一經售出恕不退款、不退換</b>，亦不因個人因素（如不會使用、電腦不相容、遊戲停權、未使用完畢等）退費。</li>
       <li>每組啟用碼限一台電腦使用，換電腦每月限 2 次；啟用碼請自行妥善保管，轉售、分享或外流導致失效者，恕不補發。</li>
       <li>使用期間依購買的方案計算，到期後需續購才能繼續使用。</li>
       <li>開發者保留隨時修改程式功能、價格與本條款的權利，修改後以本頁公告為準。</li>
@@ -307,10 +308,10 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section class="alt" style="text-align:center">
   <div class="wrap">
     <h2>現在就開始</h2>
-    <p class="sub">加入 LINE 官方好友，免費體驗 3 天，也可以詢問方案或回報問題。</p>
+    <p class="sub">加入 LINE 官方好友購買啟用碼，也可以詢問方案或回報問題。</p>
     <div class="cta" style="justify-content:center">
       <a class="btn primary" href="#install" data-href="DOWNLOAD_URL">⬇ 下載最新版</a>
-      <a class="btn line" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">加 LINE 好友 免費體驗 3 天</a>
+      <a class="btn line" href="https://lin.ee/NeJcPBY" target="_blank" rel="noopener">加 LINE 好友購買</a>
     </div>
   </div>
 </section>
